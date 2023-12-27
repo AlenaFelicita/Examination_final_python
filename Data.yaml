@@ -1,0 +1,17 @@
+address: https://test-stand.gb.ru/
+sleep_time: 3
+browser: Chrome
+username: GB202307ffbe628
+password:  a4d26689f8
+expassword: pass
+bad_username: test
+api:
+  posts: https://test-stand.gb.ru/api/posts
+  users: https://test-stand.gb.ru/api/users/profile/
+getaway:
+  posts: https://test-stand.gb.ru/gateway/posts
+  login: https://test-stand.gb.ru/gateway/login
+create_post:
+  title: Attestation file
+  description: Attestation description
+  content: Attestation content
