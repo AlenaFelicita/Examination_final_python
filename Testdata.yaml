@@ -1,0 +1,5 @@
+url: https://test-stand.gb.ru/gateway/login
+browser: chromedriver.exe
+username: Joel1981
+password: 3821fc40bb
+sleep_time: 3
