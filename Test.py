@@ -1,3 +1,5 @@
+Test1
+
 from testpage import BasePage
 from testpage import Operations
 
@@ -24,3 +26,13 @@ def test_font_size(browser, font_size):
     page = Operations(browser)
     assert page.check_about_page_title_font_size(font_size), \
         f'About Page title font size is not equal to {font_size}'
+
+
+
+
+Test2
+from check_site_linux import site_is_not_vulnerable
+
+
+def test_site_vulnerability(site):
+    assert site_is_not_vulnerable(site), f'Site {site} is vulnerable'
