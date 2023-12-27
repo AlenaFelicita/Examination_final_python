@@ -1,0 +1,19 @@
+xpath:
+    login: //*[@id="login"]/div[1]/label/input
+    password: //*[@id="login"]/div[2]/label/input
+    err_label: //*[@id="app"]/main/div/div/div[2]/h2
+    hello_user: //*[@id="app"]/main/nav/ul/li[3]/a
+    name_field: //*[@id="contact"]/div[1]/label/input
+    email_field: //*[@id="contact"]/div[2]/label/input
+    content_field: //*[@id="contact"]/div[3]/label/span/textarea
+
+    contact_us_btn: //*[@id="contact"]/div[4]/button
+
+    about_btn: //a[@href="/about"][@class="svelte-1rc85o5"]
+    about_btn: //a[@href="/about"]
+
+    about_page_title: //h1[@class="svelte-z9xc0"]
+
+css:
+    btn_selector: button
+    contact_btn: li:nth-child(2) > a
