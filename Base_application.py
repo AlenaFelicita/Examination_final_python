@@ -1,18 +1,18 @@
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
 import logging
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage:
 
-    def __init__(self, driver) -> None:
+    def __init__(self, driver):
         self.driver = driver
-        self.base_url = "https://test-stand.gb.ru/"
+        self.base_url = "https://test-stand.gb.ru"
 
-    def find_element(self, locator, time=10):
+    def find_element(self, locator, time=15):
         try:
             element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
-                                                             message=f'Cant find element by locator{locator}')
+                                                             message=f"Can`t find element by locator{locator}")
         except:
             logging.exception("Find element exception")
             element = None
@@ -23,20 +23,24 @@ class BasePage:
         if element:
             return element.value_of_css_property(property)
         else:
-            logging.error(f'Property {property} not found in element with {locator}')
+            logging.exception(f"Property {property} not found in element with locator {locator}")
             return None
 
     def go_to_site(self):
         try:
             start_browsing = self.driver.get(self.base_url)
         except:
-            logging.exception("Excepton while open site")
+            logging.exception("Exception while open site")
             start_browsing = None
         return start_browsing
 
-    def alert(self):
+    def check_alert_text(self):
         try:
-            alert = self.driver.switch_to.alert
+            alert_text = self.driver.switch_to.alert.text
+            return alert_text.text
+        except:
+            logging.exception("Exception with alert text")
+            return None
             return alert.text
         except:
             logging.exception("Exception with alert")
