@@ -44,4 +44,4 @@ class BasePage:
             return alert.text
         except:
             logging.exception("Exception with alert")
-            return None
+            return None 
