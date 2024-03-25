@@ -14,4 +14,4 @@ getaway:
 create_post:
   title: Attestation file
   description: Attestation description
-  content: Attestation content
+  content: Attestation content 
