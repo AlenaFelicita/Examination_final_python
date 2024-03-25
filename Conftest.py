@@ -20,5 +20,5 @@ def browser():
 
 @pytest.fixture()
 def get_title_font_size():
-    return "32px"
+    return "32px" 
 
