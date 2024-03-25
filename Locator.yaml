@@ -4,4 +4,4 @@ xpath:
   LOCATOR_BTN_ABOUT: //*[@id="app"]/main/nav/ul/li[1]/a
   LOCATOR_TITLE_ABOUT_PAGE: //*[@id="app"]/main/div/div/h1
 css:
-  LOCATOR_BTN_LOGIN: button
+  LOCATOR_BTN_LOGIN: button 
