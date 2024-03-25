@@ -70,3 +70,4 @@ class OperationsHelper(BasePage):
         else:
             logging.error('Error header about page not found')
             return None
+            
